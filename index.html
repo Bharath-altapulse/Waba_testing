@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatsApp Chat Board</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="board-header">
+            <div class="header-content">
+                <h1 class="board-title">WhatsApp Chat</h1>
+                <button class="btn btn--primary add-item-btn" id="addItemBtn">
+                    <span class="plus-icon">+</span>
+                    Add Item
+                </button>
+            </div>
+        </header>
+
+        <!-- Board Content -->
+        <main class="board-content">
+            <div class="board-table-container">
+                <table class="board-table" id="boardTable">
+                    <thead>
+                        <tr class="table-header">
+                            <th class="column-header">Recipient Name</th>
+                            <th class="column-header">Recipient Mobile Number</th>
+                            <th class="column-header">Text</th>
+                            <th class="column-header">Status</th>
+                            <th class="column-header actions-column">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody">
+                        <!-- Items will be dynamically populated -->
+                    </tbody>
+                </table>
+            </div>
+        </main>
+
+        <!-- Toast Notifications -->
+        <div class="toast-container" id="toastContainer"></div>
+
+        <!-- Loading Overlay -->
+        <div class="loading-overlay hidden" id="loadingOverlay">
+            <div class="loading-spinner"></div>
+            <p>Sending WhatsApp message...</p>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
